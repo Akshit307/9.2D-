@@ -5,7 +5,7 @@ import Login from "./pages/Login.jsx";
 import Header from "./components/Header.jsx";
 import FindQuestions from "./pages/FindQuestions";
 import Post from "./pages/Post.jsx";
-import Plans from "./pages/Plans.jsx";   // ✅ new import
+import Plans from "./pages/Plans.jsx";  
 import Payment from "./pages/Payment.jsx";
 
 
@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/plans" element={<Plans />} />   {/* ✅ new route */}
+        <Route path="/plans" element={<Plans />} />   
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
