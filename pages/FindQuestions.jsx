@@ -7,7 +7,7 @@ function FindQuestions() {
   const [questions, setQuestions] = useState([]);
   const [expandedId, setExpandedId] = useState(null);
 
-  // Filters
+
   const [searchTitle, setSearchTitle] = useState("");
   const [searchTag, setSearchTag] = useState("");
   const [searchDate, setSearchDate] = useState("");
@@ -42,7 +42,7 @@ function FindQuestions() {
     }
   };
 
-  // Apply filters
+
   const filteredQuestions = questions.filter((q) => {
     const matchesTitle = q.title.toLowerCase().includes(searchTitle.toLowerCase());
     const matchesTag = searchTag ? q.tag.toLowerCase() === searchTag.toLowerCase() : true;
@@ -181,3 +181,4 @@ function FindQuestions() {
 }
 
 export default FindQuestions;
+
