@@ -4,7 +4,6 @@ import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
 
-// NEW: imports for codemirror + markdown
 import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 import { oneDark } from "@codemirror/theme-one-dark";
@@ -19,7 +18,6 @@ function Post() {
   const [image, setImage] = useState(null);
   const [uploading, setUploading] = useState(false);
 
-  // NEW: state for code editor
   const [code, setCode] = useState("// write your code here");
 
   const navigate = useNavigate();
@@ -41,7 +39,7 @@ function Post() {
         title,
         description: abstract,
         text,
-        code, // NEW: save code to Firestore
+        code,
         tag: tags,
         date: new Date().toISOString().split("T")[0],
         imageUrl,
@@ -208,3 +206,4 @@ function Post() {
 }
 
 export default Post;
+
